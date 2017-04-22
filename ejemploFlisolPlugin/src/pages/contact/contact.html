@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <p> x:{{x}}   </p>
+    <p> y:{{y}}   </p>
+    <p> z:{{z}}   </p>
+    <p> pantallaAlto:{{pantallaAlto}}   </p>
+    <p> pantallaAncho:{{pantallaAncho}} </p>
+    <p> izq= {{izquierda}}     </p>
+    <p> arr={{arriba}}  </p>
+
+     <!--img  style="width:80px;height: 80px;position:absolute;z-index:3;" 
+      src="../assets/img/robot_normal.png"-->
+      
+      <img [ngStyle]="{'width.px':anchoDeFoto ,'top.px':arriba ,'left.px':izquierda} "
+       style="position:absolute;z-index:3;"   [src]="rutaDeFoto">
+    
+</ion-content>

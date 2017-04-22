@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      About
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<h2>Vibración</h2>
+  <p>
+   ejemplo de utilización de plugin para la Vibración
+   
+  </p>
+<ion-item>
+    <!--https://ionicframework.com/docs/api/components/input/Input/-->
+    <ion-input  [(ngModel)]="tiempo" type="number"  min="500" max="3000" 
+    placeholder="Cantidad de milisegundos">
+    </ion-input>
+  </ion-item>
+
+ <button ion-button round block icon-left (click)="vibrar()" color="dark">
+  <ion-icon name="alarm"></ion-icon>
+        </button>
+</ion-content>

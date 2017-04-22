@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+   <ion-input [(ngModel)]="usuario" type="text" readonly placeholder="Ingrese su usuario">
+	</ion-input>
+    </ion-title>
+
+	<ion-input [(ngModel)]="mensaje" type="text" placeholder="Ingrese su mensaje">
+	</ion-input> 
+    <!-- http://ionicframework.com/docs/components/#buttons-in-components-->
+    <ion-buttons end>
+      <button ion-fab mini icon-only (click)="EnviarMensaje()">
+        <!--https://ionicframework.com/docs/ionicons/-->
+        <ion-icon  name="arrow-dropright-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+ <!--ion-buttons end-->
+     
+
+
+      <!--button ion-fab mini icon-only (click)="logOut()"-->
+        <!--https://ionicframework.com/docs/ionicons/    ion-md-attach   -->
+        <!--ion-icon  name="ion-md-close-circle"  class="ion-md-close-circle"></ion-icon>
+      </button>
+    </ion-buttons-->
+
+<!--
+<ul>
+  <li class="text" *ngFor="let item of listadosDeMensajes | async">-->
+    <!-- {{item.$value}}-->
+   <!--  {{ item | json }}-->
+   <!--
+    <h5>{{item.usuario}}</h5>
+    <h2>{{item.mensaje}}</h2>
+
+  </li>
+</ul>
+-->
+
+
+<!--https://github.com/driftyco/ionic-preview-app/blob/master/src/pages/lists/multiline/template.html -->
+  <ion-list>
+    <ion-list-header>
+      ultimos mensajes
+    </ion-list-header>
+
+    <ion-item *ngFor="let item of listadosDeMensajes | async">
+      <ion-avatar item-left >
+        <img src="assets/img/usuario.png">
+      </ion-avatar>
+      <h2>{{item.usuario}} :</h2>
+      <h3> {{item.mensaje}}</h3>
+      <p>{{item.fecha}}</p>
+    </ion-item>
+
+   
+  </ion-list>
+</ion-content>
